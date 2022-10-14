@@ -16,7 +16,7 @@ namespace TimeApi.Controllers
             _timeService = timeService;
         }
 
-        [HttpGet("TbilisiTime")]
+        [HttpGet("UtcTime")]
         public string GetTime()
         {
             return _timeService.GetTime();

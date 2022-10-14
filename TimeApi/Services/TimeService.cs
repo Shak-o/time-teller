@@ -8,9 +8,7 @@ namespace TimeApi.Services
         {
             var now = DateTime.UtcNow;
 
-            var tbilisi = now.AddHours(4);
-
-            return tbilisi.ToString(CultureInfo.InvariantCulture);
+            return now.ToString(CultureInfo.InvariantCulture);
         }
 
         public string GetTimeByZone(string zone)
