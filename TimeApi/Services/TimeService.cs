@@ -1,14 +1,25 @@
 ﻿using System.Globalization;
+using TimeApi.Models;
 
 namespace TimeApi.Services
 {
     public class TimeService : ITimeService
     {
-        public string GetTime()
+        public ResultModel GetTime()
         {
             var now = DateTime.UtcNow;
 
-            return now.ToString(CultureInfo.InvariantCulture);
+            var toReturn = new ResultModel
+            {
+                wYear = now.Year,
+                wMonth = now.Month,
+                wDay = now.Day,
+                wHour = now.Hour,
+                wMinute = now.Minute,
+                wSecond = now.Second,
+                wMilliseconds = now.Millisecond
+            };
+            return toReturn;
         }
 
         public string GetTimeByZone(string zone)

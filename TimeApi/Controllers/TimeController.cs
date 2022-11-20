@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TimeApi.Models;
 using TimeApi.Services;
 
 namespace TimeApi.Controllers
@@ -17,7 +18,7 @@ namespace TimeApi.Controllers
         }
 
         [HttpGet("UtcTime")]
-        public string GetTime()
+        public ResultModel GetTime()
         {
             return _timeService.GetTime();
         }

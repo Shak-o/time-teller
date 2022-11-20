@@ -1,8 +1,10 @@
-﻿namespace TimeApi.Services
+﻿using TimeApi.Models;
+
+namespace TimeApi.Services
 {
     public interface ITimeService
     {
-        public string GetTime();
+        public ResultModel GetTime();
         public string GetTimeByZone(string zone);
     }
 }
